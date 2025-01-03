@@ -1,0 +1,18 @@
+.barra-inferior {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barra-inferior span {
+  position: absolute;
+  opacity: 0;
+  color: #012a59;
+  font-weight: bolder;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.barra-inferior span.active {
+  opacity: 1;
+}

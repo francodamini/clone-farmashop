@@ -13,7 +13,21 @@
     <meta name="theme-color" content="#fff" />
     <link rel="icon" type="image/jpg" href="Media/Img/logo.png" />
     <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/header.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="CSS/Header/barra_superior.css"
+    />
+    <link rel="stylesheet" type="text/css" href="CSS/Header/barra_media.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="CSS/Header/barra_inferior.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -35,6 +49,15 @@
           <img src="Media/Img/logo.svg" alt="Farmashop logo" />
           <form action="" method="get">
             <input type="text" placeholder="¿Qué estás buscando?" />
+            <a id="lupa" class="active"
+              ><img width="20px" src="Media/Img/iconos/lupa.svg" alt="Lupa"
+            /></a>
+            <a id="flecha"
+              ><img
+                width="20px"
+                src="Media/Img/iconos/right arrow.svg"
+                alt="Lupa"
+            /></a>
           </form>
           <nav>
             <a href="">Registrarse</a>
@@ -49,17 +72,13 @@
         </div>
       </section>
       <section class="barra-inferior">
-        <div>
-          ><span class="active"
-            ><strong>¡Todo lo que buscas para las fiestas!</strong></span
-          >
-          >
-        </div>
-        <strong><span>¡Mega OFERTAS hasta 50% OFF!</span></strong>
-        <strong><span>Mailing de descuentos 25% Farmacard</span></strong>
+        <span class="active">¡Todo lo que buscas para las fiestas!</span>
+        <span>¡Mega OFERTAS hasta 50% OFF!</span>
+        <span>Mailing de descuentos 25% Farmacard</span>
       </section>
     </header>
     <main></main>
     <footer></footer>
+    <script src="JS/script.js"></script>
   </body>
 </html>
