@@ -8,7 +8,10 @@
   height: inherit;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
+}
+
+.bs-logos img {
+  flex: 0 1;
 }
 
 .bs-logos a:first-child {
@@ -25,7 +28,41 @@
 }
 
 .bs-logos > a {
-  padding: 0 3.5%;
+  padding: 0 3%;
   display: flex;
   align-content: center;
+}
+
+.bs-farma {
+  background-color: var(--azul);
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .bs-farma {
+    display: block;
+    padding: 0 5%;
+    align-content: center;
+    border-top-right-radius: 8px;
+  }
+
+  .bs-logos {
+    padding: 0 3%;
+    width: 100%;
+  }
+
+  .bs-logos > a {
+    padding: 0 5%;
+  }
+
+  .barra-superior {
+    display: flex;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .barra-superior {
+    padding: 0;
+  }
 }

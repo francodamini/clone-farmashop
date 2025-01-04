@@ -88,6 +88,20 @@
   transition: 3ms ease;
 }
 
+@media (max-width: 992px) {
+  .grilla nav a {
+    display: none;
+  }
+
+  .grilla {
+    grid-template-columns: auto auto 7fr 2fr;
+  }
+
+  .grilla nav {
+    width: 40%;
+  }
+}
+
 @media (max-width: 767px) {
   .barra-media {
     height: 60px;
@@ -98,11 +112,27 @@
   }
 
   .grilla form a {
-    right: 2%;
     padding: 7px;
   }
 
-  .grilla nav a {
+  .grilla #farma-logo {
     display: none;
+  }
+
+  .grilla {
+    grid-template-columns: auto 15fr 1fr;
+  }
+
+  .grilla input {
+    width: 100%;
+  }
+
+  #lupa {
+    right: 1%;
+  }
+
+  #flecha {
+    right: 0.5%;
+    padding: 8px;
   }
 }
