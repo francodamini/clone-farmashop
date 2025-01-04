@@ -24,6 +24,7 @@
       type="text/css"
       href="CSS/Header/barra_inferior.css"
     />
+    <link rel="stylesheet" type="text/css" href="CSS/Header/modal.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -31,6 +32,8 @@
   </head>
   <body>
     <header>
+      <!--Barra superior-->
+
       <section class="barra-superior">
         <div class="bs-farma">
           <img id="farma-logo" src="Media/Img/logo.svg" alt="Farmashop logo" />
@@ -41,9 +44,13 @@
           <a href="/"><img src="Media/Img/kiehls.svg" alt="Logo Kiehls" /></a>
         </div>
       </section>
+
+      <!--Barra media-->
+
       <section class="barra-media">
         <div class="grilla">
           <img
+            id="hamburger"
             width="24px"
             height="24px"
             src="Media/Img/iconos/hamburger.svg"
@@ -74,6 +81,9 @@
           </nav>
         </div>
       </section>
+
+      <!--Barra inferior-->
+
       <section class="barra-inferior">
         <span class="active">¡Todo lo que buscas para las fiestas!</span>
         <span>¡Mega OFERTAS hasta 50% OFF!</span>
@@ -86,6 +96,99 @@
           />
         </span>
       </section>
+
+      <!-- Modal -->
+
+      <dialog id="hamburger_modal">
+        <div>
+          <header>
+            <img
+              width="35px"
+              src="Media/Img/logo.png"
+              alt="logo farma"
+              title="Logo Farmashop"
+            />
+            <img
+              id="btn_cerrar"
+              width="35px"
+              src="Media/Img/iconos/close.svg"
+              alt="Cerrar Modal"
+            />
+          </header>
+          <ul class="modal_nav">
+            <li>
+              <a href="">
+                <span>Categorías</span>
+                <img
+                  width="24px"
+                  src="Media/Img/iconos/gray_right_arrow.svg"
+                  alt="carrito"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  width="24px"
+                  src="Media/Img/iconos/gray_cart.svg"
+                  alt="carrito"
+                />
+                <span>Carrito</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  width="24px"
+                  src="Media/Img/iconos/gray-login.svg"
+                  alt="carrito"
+                />
+                <span>Iniciar Sesión</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  width="24px"
+                  src="Media/Img/iconos/gray_register.svg"
+                  alt="carrito"
+                />
+                <span>Registrarse</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  width="24px"
+                  src="Media/Img/iconos/gray_market.svg"
+                  alt="carrito"
+                />
+                <span>Sucursales</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  width="24px"
+                  src="Media/Img/iconos/gray_blog.svg"
+                  alt="carrito"
+                />
+                <span>Farmablog</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  width="20px"
+                  src="Media/Img/iconos/salud.svg"
+                  alt="carrito"
+                />
+                <span>Más Salud</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </dialog>
     </header>
     <main></main>
     <footer></footer>

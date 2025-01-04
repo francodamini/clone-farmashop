@@ -16,6 +16,29 @@ input.addEventListener("input", () => {
   }
 });
 
+//MODAL
+
+const hamburger = document.getElementById("hamburger");
+const modal = document.getElementById("hamburger_modal");
+const btn_cerrar = document.getElementById("btn_cerrar");
+
+hamburger.addEventListener("click", () => {
+  modal.classList.add("show");
+  modal.showModal();
+});
+
+btn_cerrar.addEventListener("click", () => {
+  modal.classList.remove("show");
+  modal.close();
+});
+
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.remove("show");
+    modal.close();
+  }
+});
+
 //BARRA INFERIOR
 
 const spans = document.querySelectorAll(".barra-inferior span");
