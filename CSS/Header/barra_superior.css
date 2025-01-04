@@ -10,10 +10,6 @@
   align-items: center;
 }
 
-.bs-logos img {
-  flex: 0 1;
-}
-
 .bs-logos a:first-child {
   padding-left: 0;
 }
@@ -64,5 +60,9 @@
 @media (max-width: 375px) {
   .barra-superior {
     padding: 0;
+  }
+
+  .bs-farma {
+    padding: 0 2%;
   }
 }
