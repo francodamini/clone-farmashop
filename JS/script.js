@@ -18,25 +18,24 @@ input.addEventListener("input", () => {
 
 //MODAL
 
+const backdrop = document.getElementById("backdrop");
 const hamburger = document.getElementById("hamburger");
 const modal = document.getElementById("hamburger_modal");
 const btn_cerrar = document.getElementById("btn_cerrar");
 
 hamburger.addEventListener("click", () => {
+  backdrop.classList.add("show");
   modal.classList.add("show");
-  modal.showModal();
 });
 
 btn_cerrar.addEventListener("click", () => {
   modal.classList.remove("show");
-  modal.close();
+  backdrop.classList.remove("show");
 });
 
-modal.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.classList.remove("show");
-    modal.close();
-  }
+backdrop.addEventListener("click", () => {
+  modal.classList.remove("show");
+  backdrop.classList.remove("show");
 });
 
 //BARRA INFERIOR
