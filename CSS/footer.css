@@ -1,8 +1,7 @@
 footer {
-  height: 275px;
   box-sizing: border-box;
   background-color: var(--azul_inter);
-  padding: 30px 130px 0px 130px;
+  padding: 3% 10% 0% 10%;
 }
 
 footer section {
@@ -10,6 +9,7 @@ footer section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .contenedor-enlaces {
@@ -41,13 +41,13 @@ footer section {
 .iconos-contenedor {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 15px;
+  padding: 0px !important;
 }
 
 .icono-circulo {
   padding: 0px !important;
-  margin: 0px 7.5px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -56,11 +56,20 @@ footer section {
   justify-content: center;
   background-color: rgb(52, 85, 122);
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .icono-circulo:hover {
   cursor: pointer;
   transform: scale(1.15);
+}
+
+#app {
+  justify-content: center !important;
+}
+
+#app .icono-circulo {
+  margin: 0px 8px;
 }
 
 .copy {
@@ -74,4 +83,34 @@ footer section {
   color: white;
   font-size: 13px;
   font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 999px) {
+  footer {
+    padding: 3% 5% 0% 5%;
+  }
+
+  .iconos-contenedor {
+    justify-content: center;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-enlaces {
+    grid-template-columns: 100%; /* Una sola columna */
+    grid-template-rows: repeat(4, auto); /* Cuatro filas */
+  }
+
+  .iconos-contenedor {
+    border-bottom: none !important;
+    gap: 10px;
+  }
+
+  .contenedor-enlaces div {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 3%;
+  }
 }
