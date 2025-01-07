@@ -33,3 +33,59 @@ main {
 .row3 {
   border-radius: 0.75rem;
 }
+
+@media (max-width: 767px) {
+  .grid-col {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr 2fr;
+    gap: 16px;
+    height: 200vh;
+  }
+
+  .col1,
+  .col2,
+  .col3 {
+    gap: 16px;
+  }
+
+  .col1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 3fr;
+  }
+
+  .col1 .row1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .col1 .row2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .col1 .row3 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .col2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr 3fr;
+  }
+
+  .col3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 3fr;
+  }
+
+  .col3 .row1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .col3 .row2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .col3 .row3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
