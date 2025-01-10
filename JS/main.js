@@ -1,10 +1,9 @@
 let currentSlide = 0;
 
 function showSlide(index) {
-  const products = document.querySelectorAll(".carousel .product");
-  const totalProducts = products.length;
-  const visibleProducts = window.innerWidth < 768 ? 2 : 5; // 2 o 5 productos visibles según el tamaño de la pantalla
-  console.log("currentslide antes del if: ", index);
+  const visibleProducts =
+    window.innerWidth <= 650 ? 2 : window.innerWidth <= 767 ? 3 : 5;
+
   if (visibleProducts == 5) {
     // Control del índice para productos individuales
     if (index >= 6) {
@@ -14,31 +13,29 @@ function showSlide(index) {
     } else {
       currentSlide = index;
     }
-    // Calcula la posición de desplazamiento
-    const offset = -currentSlide * (100 / visibleProducts); // Desplazamiento en porcentaje
-    console.log("offset: ", offset);
-    document.querySelector(
-      ".carousel"
-    ).style.transform = `translateX(${offset}%)`;
-  } else {
-    console.log("entra");
-    if (index >= 9) {
-      currentSlide = 0; // Reinicia al primer producto si pasa el último
+  } else if (visibleProducts == 3) {
+    if (index >= 8) {
+      currentSlide = 0;
     } else if (index < 0) {
-      currentSlide = 8; // Vuelve al último producto si el índice es negativo
+      currentSlide = 7;
     } else {
       currentSlide = index;
     }
-
-    // Calcula la posición de desplazamiento
-    const offset = -currentSlide * (60 / visibleProducts); // Desplazamiento en porcentaje
-    console.log("offset: ", offset);
-    document.querySelector(
-      ".carousel"
-    ).style.transform = `translateX(${offset}%)`;
+  } else {
+    if (index >= 9) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = 8;
+    } else {
+      currentSlide = index;
+    }
   }
 
-  console.log("currentslide despues del if: ", currentSlide);
+  // Calcula la posición de desplazamiento
+  const offset = -currentSlide * (100 / visibleProducts);
+  document.querySelector(
+    ".carousel-container"
+  ).style.transform = `translateX(${offset}%)`;
 }
 
 function nextSlide() {
@@ -49,7 +46,7 @@ function prevSlide() {
   showSlide(currentSlide - 1);
 }
 
-// Mostrar el primer producto al cargar la página
+// Muestro el primer producto al cargar la página
 showSlide(currentSlide);
 
 // Detecta cambios de tamaño de pantalla y reinicia el carrusel en la vista correspondiente
