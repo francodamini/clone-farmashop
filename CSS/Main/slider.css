@@ -1,123 +1,25 @@
-.carousel {
+.slider {
+  width: 100%;
   margin: 24px auto;
-  position: relative;
   overflow-x: hidden;
 }
 
-.carousel-container {
-  width: 100%;
+.slider-container {
   display: flex;
-  align-items: center;
-  transition: transform 0.5s ease;
+  transition: transform 1.5s ease-in-out;
 }
 
-.product {
-  flex: 0 0 20%;
-  padding: 12px;
-  height: 350px;
+.slide {
+  flex: 0 0 calc((100% - 24px) / 3); /*24 por los margenes*/
+  margin-right: 4px;
+  margin-left: 4px;
+  height: 200px;
+  border-radius: 8px;
   box-sizing: border-box;
 }
 
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  padding: 10px;
-  cursor: pointer;
-  border: none;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.prev {
-  left: 0px;
-}
-
-.next {
-  right: 0px;
-}
-
-.prev:hover,
-.next:hover {
-  color: #f8c2b5;
-  transform: translateY(-50%) scale(1.2);
-}
-
-@media (max-width: 767px) {
-  .product {
-    flex: 0 0 33.33%;
-  }
-}
-@media (max-width: 650px) {
-  .product {
-    flex: 0 0 50%;
-  }
-}
-
-/*
-
-.product a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product img {
-  width: 250px;
-  height: 340px; 
-  object-fit: cover; 
-}
-
-.product p {
-  margin: 5px 0;
-}
-
-.price {
-  font-size: 14px;
-  color: grey;
-} */
-
-/* Media queries para responsividad */
-@media (max-width: 768px) {
-  .product {
-    min-width: 30%; /* Ajustar para mostrar aproximadamente 2 productos por fila */
-    padding: 0 5px; /* Ajuste de margen */
-  }
-
-  .product img {
-    width: 100%; /* Imagen ocupa el ancho completo del contenedor */
-    height: 200px; /* Altura más pequeña en móvil */
-    object-fit: cover; /* Mantiene proporción de la imagen */
-  }
-
-  .price {
-    font-size: 12px; /* Tamaño más pequeño para precios */
-  }
-
-  .product p {
-    font-size: 14px; /* Tamaño de texto reducido en móviles */
-  }
-}
-
-@media (max-width: 480px) {
-  .product {
-    min-width: 30%; /* Ajustar para mostrar aproximadamente 2 productos por fila */
-    padding: 0 5px; /* Ajuste de margen */
-  }
-
-  .product img {
-    width: 100%; /* Imagen ocupa el ancho completo del contenedor */
-    height: 200px; /* Altura más pequeña en móvil */
-    object-fit: cover; /* Mantiene proporción de la imagen */
-  }
-
-  .price {
-    font-size: 12px; /* Tamaño más pequeño para precios */
-  }
-
-  .product p {
-    font-size: 14px; /* Tamaño de texto reducido en móviles */
+@media (max-width: 425px) {
+  .slide {
+    flex: 0 0 calc((100% - 8px)); /*8 por margenes*/
   }
 }
