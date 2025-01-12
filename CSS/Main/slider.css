@@ -13,16 +13,16 @@
   flex: 0 0 calc((100% - 24px) / 3); /*24 por los margenes*/
   margin-right: 4px;
   margin-left: 4px;
-  height: 200px;
+  aspect-ratio: 67 / 32;
+  height: 200;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
 }
 
 @media (max-width: 425px) {
