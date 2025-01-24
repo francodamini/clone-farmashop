@@ -127,6 +127,26 @@
   transition: transform 0.5s ease;
 }
 
+.perfume-section {
+  width: 100%;
+  align-self: start;
+  padding: 5% 0 0 5%;
+}
+
+.perfume-section p {
+  font-size: 1.2rem;
+}
+.perfume-section h2 {
+  margin: 2% 0;
+  font-size: 2.5rem;
+}
+.perfume-section button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+}
+
 @media (max-width: 767px) {
   .grid-col {
     grid-template-columns: 1fr;
