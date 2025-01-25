@@ -26,7 +26,8 @@
 
 .col1 .row3,
 .col3 .row3,
-.row1,
+.col1 .row1,
+.col3 .row1,
 .row2 {
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,6 +56,9 @@
 
 .col2 .row1 {
   background-image: url(/Media/Img/Modelo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 15%;
 }
 
 .col2 .row2 {
@@ -99,7 +103,7 @@
   font-weight: 600;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: transform 0.3s ease, visibility 0s 0.5s;
+  transition: transform 0.3s ease, visibility 0s 0.1s;
 }
 
 .background {
