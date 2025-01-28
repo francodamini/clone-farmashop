@@ -16,6 +16,70 @@
   padding: 12px;
   height: 350px;
   box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.product:hover {
+  cursor: pointer;
+}
+
+.product > img {
+  width: 168px;
+  align-self: center;
+}
+
+.product h5 {
+  margin: 5% 0;
+  padding: 0 10%;
+  font-weight: 500;
+  color: #333;
+}
+
+.product div {
+  margin-bottom: 5%;
+}
+
+.product div > :first-child {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 2.5%;
+}
+
+.product div img {
+  aspect-ratio: 24/19;
+  width: 20px;
+  height: 15.833px;
+}
+
+.prod-farma-wrap {
+  display: flex;
+  justify-content: center;
+  color: #eb0a00;
+  font-size: 14px;
+}
+
+.farma-span {
+  font-weight: 600;
+}
+
+.product button {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px;
+  padding: 7px 2px;
+  width: 100%;
+  background-color: var(--azul);
+  border: none;
+}
+
+.product button:hover {
+  background-color: var(--azul_inter);
+  cursor: pointer;
 }
 
 .prev,
