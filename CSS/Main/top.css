@@ -117,7 +117,8 @@
 }
 
 .col1 div:hover,
-.col3 div:hover {
+.col3 div:hover,
+.col2 div:hover {
   cursor: pointer;
 }
 .col1 div:hover .background,
@@ -139,16 +140,24 @@
 
 .perfume-section p {
   font-size: 1.2rem;
+  color: white;
+  text-shadow: 0 0 10px #201f1e;
 }
 .perfume-section h2 {
   margin: 2% 0;
   font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 10px #201f1e;
 }
 .perfume-section button {
   padding: 10px 20px;
   border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.6);
   font-size: 1rem;
+}
+
+.perfume-section button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
