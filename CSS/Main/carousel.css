@@ -1,7 +1,16 @@
 .carousel {
-  margin: 24px auto;
+  margin: 48px auto 12px auto;
   position: relative;
   overflow-x: hidden;
+}
+
+.nov {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #34495e;
+  margin-bottom: 1.5%;
 }
 
 .carousel-container {
@@ -85,11 +94,11 @@
 .prev,
 .next {
   position: absolute;
+  font-size: 22px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  padding: 10px;
+  background-color: white;
+  color: var(--azul);
   cursor: pointer;
   border: none;
   z-index: 1;
@@ -106,7 +115,7 @@
 
 .prev:hover,
 .next:hover {
-  color: #f8c2b5;
+  color: black;
   transform: translateY(-50%) scale(1.2);
 }
 

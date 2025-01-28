@@ -26,16 +26,19 @@ const btn_cerrar = document.getElementById("btn_cerrar");
 hamburger.addEventListener("click", () => {
   backdrop.classList.add("show");
   modal.classList.add("show");
+  document.body.classList.add("no-scroll");
 });
 
 btn_cerrar.addEventListener("click", () => {
   modal.classList.remove("show");
   backdrop.classList.remove("show");
+  document.body.classList.remove("no-scroll");
 });
 
 backdrop.addEventListener("click", () => {
   modal.classList.remove("show");
   backdrop.classList.remove("show");
+  document.body.classList.remove("no-scroll");
 });
 
 //BARRA INFERIOR
