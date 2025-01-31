@@ -2,7 +2,7 @@ let currentSlide = 0;
 
 function showSlide(index) {
   const visibleProducts =
-    window.innerWidth <= 650 ? 2 : window.innerWidth <= 767 ? 3 : 5;
+    window.innerWidth <= 650 ? 2 : window.innerWidth <= 768 ? 3 : 5;
 
   if (visibleProducts == 5) {
     // Control del índice para productos individuales
